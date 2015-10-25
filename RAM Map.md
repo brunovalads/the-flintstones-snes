@@ -29,7 +29,7 @@ $7E0A4D|8 bytes|Extended sprite accumulated X subpixels table.
 $7E0A55|1 byte|Accumulated Y subpixels.
 $7E0A57|58 bytes|Sprite accumulated Y subpixels table.
 $7E0A91|8 bytes|Extended sprite accumulated Y subpixels table.
-$7E0A98|2 bytes<sup>[[1]](/1./)</sup>|Fred's animation poses. A list of valid values can be found here<sup>[2][2]</sup>.
+$7E0A98|2 bytes<sup>[[1]](/1./)</sup>|Fred's animation poses. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map%20Extra%20Info.md#7e0a98---freds-animation-poses).
 $7E0A9A|58 bytes|Sprite animation table, maybe<sup>[1][1]</sup>.
 $7E0AD4|8 bytes|Extended sprite animation table, maybe<sup>[[1]](/1./)</sup>.
 $7E0CB9|1 byte|Fred's effective direction, maybe<sup>[[1]](/1./)</sup>: #00 = facing right, #64 = facing left.
@@ -44,11 +44,11 @@ $7E0E94|1 byte|Is on ground flag. #01 = yes, #00 = no.
 $7E0FEE|2 bytes|Mirror of X speed ($7E0D84). The low byte resets to 255 when not playing.
 $7E0FF0|2 bytes|Last valid X position to respawn (if the player falls on a pit).
 $7E0FF2|2 bytes|Last valid Y position to respawn (if the player falls on a pit).
-$7E0FF6|1 byte|Fred's status. A list of valid values can be found here<sup>[[2]](/2./)</sup>.
+$7E0FF6|1 byte|Fred's status. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map%20Extra%20Info.md#7e0ff6---freds-status).
 $7E1010|1 byte|Something related to be standing still, increments by 4 every 8 frames.
 $7E140F|1 byte|Language option: #00 = brittish english, #01 = american english, #02 = spanish, #03 = german, #04 = italian, #05 = french.
 $7E1D51|1 byte|Invincibility timer. The player has 120 frames of invincibility after being hit or falling in a pit.
-$7E1D5B|1 byte|Current level. A list of valid values can be found here<sup>[[2]](/2./)</sup>.
+$7E1D5B|1 byte|Current level. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map%20Extra%20Info.md#7e1d5b---current-level).
 $7E1D65|1 byte|Lives.
 $7E1D69|1 byte|Health (Fred faces in the life counter, #02 = normal, #01 = tongue out, #00 = tongue out and spiked hair).
 $7E1D6D|1 byte|Stones.
@@ -88,7 +88,5 @@ $7E1ED6|1 byte|Boss HP.
 
 ###Observations:
 1. These addresses need further research, since I'm just one and started this study a couple weeks ago.
-2. I still need to create these reference pages.
 
 [1]: https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map.md#observations
-[2]: https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map.md#observations
