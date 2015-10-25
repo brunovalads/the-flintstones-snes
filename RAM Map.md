@@ -89,5 +89,6 @@ $7E1ED6|1 byte|Boss HP.
 ###Observations:
 1. These addresses need further research, since I'm just one and started this study a couple weeks ago.
 2. I still need to create these reference pages.
-[1]: https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map.md#Observations
-[2]: https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map.md#Observations
+
+[1]: https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map.md#observations
+[2]: https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map.md#observations
