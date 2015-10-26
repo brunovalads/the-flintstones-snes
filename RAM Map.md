@@ -83,7 +83,7 @@ $7E1DC9|1 byte|Mirror of $7E1DAB.
 $7E1DCB|1 byte|Mirror of $7E1DAD.
 $7E1DCD|1 byte|Mirror of $7E1DAF.
 $7E1DCF|1 byte|Mirror of $7E1DB1.
-$7E1DD5|2 bytes|Counter for how long you're holding a rock to throw (holding X). When hits #120 you burn you hand and waste the rock. This determines how far the rock can go. The high byte is never used, but is updated if you poke a value bigger than #120.
+$7E1DD5|2 bytes|Counter for how long you're holding a rock to throw (holding X). When hits #120 you burn you hand and waste the rock. This determines how far the rock can go, e.g.: if you hold for 20 frames the rock will float without y speed for 20 frames. The high byte is never used, but is updated if you poke a value bigger than #120.
 $7E1DD7|2 bytes|Idle timer. It's #300 when player is acting, then decrements whenever the player is idle. When reaches #00, activates the idle animation.
 $7E1ED6|1 byte|Boss HP.
 
