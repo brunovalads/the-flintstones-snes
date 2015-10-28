@@ -45,6 +45,7 @@ $7E0FEE|2 bytes|Mirror of X speed ($7E0D84). The low byte resets to 255 when not
 $7E0FF0|2 bytes|Last valid X position to respawn (if the player falls on a pit).
 $7E0FF2|2 bytes|Last valid Y position to respawn (if the player falls on a pit).
 $7E0FF6|1 byte|Fred's status. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map%20Extra%20Info.md#7e0ff6---freds-status).
+$7E1000|1 byte|Is smashing flag. When #01, Fred hits enemies and rocks.
 $7E1010|1 byte|Something related to be standing still, increments by 4 every 8 frames.
 $7E140F|1 byte|Language option: #00 = brittish english, #01 = american english, #02 = spanish, #03 = german, #04 = italian, #05 = french.
 $7E1D51|1 byte|Invincibility timer. The player has 120 frames of invincibility after being hit or falling in a pit.
