@@ -85,7 +85,7 @@ $7E1DCD|1 byte|Mirror of $7E1DAF.
 $7E1DCF|1 byte|Mirror of $7E1DB1.
 $7E1DD5|2 bytes|Counter for how long you're holding a rock to throw (holding X). When hits #120 you burn you hand and waste the rock. This determines how far the rock can go, e.g.: if you hold for 20 frames the rock will float without y speed for 20 frames. The high byte is never used, but is updated if you poke a value bigger than #120.
 $7E1DD7|2 bytes|Idle timer. It's #300 when player is acting, then decrements whenever the player is idle. When reaches #00, activates the idle animation.
-$7E1ED6|1 byte|Boss HP. The 1st boss (Quarry 3) has #15, the 2nd boss (Jungle 4) has #5.
+$7E1ED6|1 byte|Boss HP. The Caveman boss (Quarry 3) has #15, the Tiger boss (Jungle 4) has #5.
 
 ###Observations:
 1. These addresses need further research, since I'm just one and started this study a couple weeks ago.
