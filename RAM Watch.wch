@@ -1,0 +1,27 @@
+
+25
+00000	7E0988	b	u	0	X pos (low)
+00001	7E0989	b	u	0	X pos (high)
+00002	7E0A11	b	u	0	X subpos
+00003	7E09CC	b	u	0	Y pos (low)
+00004	7E09CD	b	u	0	Y pos (high)
+00005	7E0A55	b	u	0	Y subpos
+00006	000000	S	S	0	----------------------------
+00007	7E0D84	b	u	0	X subspeed
+00008	7E0D85	b	s	0	X speed
+00009	7E0DC8	b	u	0	Y subspeed
+0000A	7E0DC9	b	s	0	Y speed
+0000B	000000	S	S	0	----------------------------
+0000C	7E0E94	b	u	0	On ground flag
+0000D	7E1000	b	u	0	Is smashing flag
+0000E	7E0FF6	b	u	0	Fred's state
+0000F	7E1D51	b	u	0	Invincibility timer
+00010	7E1DD5	b	u	0	Throw power
+00011	000000	S	S	0	----------------------------
+00012	7E0018	b	u	0	Camera x pos (low)
+00013	7E0019	b	u	0	Camera x pos (high)
+00014	7E001A	b	u	0	Camera y pos (low)
+00015	7E001B	b	u	0	Camera y pos (high)
+00016	000000	S	S	0	----------------------------
+00017	7E1D5B	b	h	0	Level
+00018	7E003C	b	u	0	Game mode (maybe)
