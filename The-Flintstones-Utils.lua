@@ -170,12 +170,14 @@ WRAM = {
 	last_valid_x = 0x0FF0, -- 2 bytes
 	last_valid_y = 0x0FF2, -- 2 bytes
 	status = 0x0FF6,
+	is_smashing = 0x1000,
 	invincibility_timer = 0x1D51,
 	lives = 0x1D65,
 	health = 0x1D69,
 	stones = 0x1D6D,
 	bowling_balls = 0x1D71,
 	score = 0x1D75, -- 2 bytes
+	throw_power = 0x1DD5, -- 2 bytes (but only the first is used)
 	idle_timer = 0x1DD7, -- 2 bytes
 	
     -- Sprites
@@ -1251,6 +1253,7 @@ function LSNES.display_input()
         end
         
         draw.text(-LSNES.Border_left, y_text, input, color)
+		draw.text(-LSNES.Border_left + 105, y_text, subframe, color)
         
         if is_startframe or is_nullinput then
             frame = frame - 1
@@ -1337,13 +1340,16 @@ local function main_paint_function(authentic_paint, from_paint)
 	local last_valid_x = u16(WRAM.last_valid_x)
 	local last_valid_y = u16(WRAM.last_valid_y)
 	local status = u8(WRAM.status)
+	local is_smashing = u8(WRAM.is_smashing)
 	local invincibility_timer = u8(WRAM.invincibility_timer)
 	local lives = u8(WRAM.lives)
 	local health = u8(WRAM.health)
 	local stones = u8(WRAM.stones)
 	local bowling_balls = u8(WRAM.bowling_balls)
 	local score = u8(WRAM.score)
+	local throw_power = u8(WRAM.throw_power)
 	local idle_timer = u16(WRAM.idle_timer)
+	local boss_hp = u8(WRAM.boss_hp)
 	
 	local i = 0
 	local delta_x = 8
@@ -1381,7 +1387,13 @@ local function main_paint_function(authentic_paint, from_paint)
 		draw.text(table_x + 10*delta_x + 2, table_y + i*delta_y, fmt("%s", on_ground), temp_color, COLOUR.background)
 		i = i + 1
 		
-		draw.text(table_x, table_y + i*delta_y, string.upper(fmt("Status: %02x", status)), COLOUR.text, COLOUR.background)
+		status = string.upper(fmt("%02x", status))
+		draw.text(table_x, table_y + i*delta_y, fmt("Status: %s", status), COLOUR.text, COLOUR.background)
+		i = i + 1
+		
+		if is_smashing == 0 then is_smashing = "no" temp_color = COLOUR.warning else is_smashing = "yes" temp_color = COLOUR.positive end
+		draw.text(table_x, table_y + i*delta_y, fmt("Smashing:"), COLOUR.text, COLOUR.background)
+		draw.text(table_x + 9*delta_x + 2, table_y + i*delta_y, fmt("%s", is_smashing), temp_color, COLOUR.background)
 		i = i + 1
 		
 		draw.text(table_x, table_y + i*delta_y, fmt("Last valid pos\n(%+d, %+d)", last_valid_x, last_valid_y), COLOUR.text, COLOUR.background)
@@ -1396,9 +1408,42 @@ local function main_paint_function(authentic_paint, from_paint)
 			draw.text(table_x, table_y + i*delta_y, fmt("Idle timer: %d", idle_timer), COLOUR.text, COLOUR.background)
 			i = i + 1
 		end
-		
+
 		local x_screen, y_screen = screen_coordinates(x, y, camera_x, camera_y)
 		draw.pixel(x_screen, y_screen, COLOUR.text, COLOUR.background) -- Fred's position pixel
+	
+		if throw_power ~= 0 then -- stone trajectory based on throw power
+			draw.text(table_x, table_y + i*delta_y, fmt("Throw power: %d", throw_power), COLOUR.text, COLOUR.background)
+			
+			local dir, x_off, x_base
+			if direction == right_arrow then
+				dir = 1
+				x_off = 64
+			else
+				dir = -1
+				x_off = -5
+			end
+			x_base = 2*x_screen + x_off + dir*(throw_power - 1)*7
+			for k = 0, throw_power, 2 do
+				draw.text(x_base  + dir*k*7, 2*y_screen + 24, "◯", COLOUR.extsprites[2])	
+			end	
+			draw.text(x_base  + dir*24), 2*y_screen + 24 + 1, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*48), 2*y_screen + 24 + 3, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*70), 2*y_screen + 24 + 12, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*92), 2*y_screen + 24 + 23, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*114), 2*y_screen + 24 + 36, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*136), 2*y_screen + 24 + 52, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*156), 2*y_screen + 24 + 71, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*176), 2*y_screen + 24 + 93, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*196), 2*y_screen + 24 + 119, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*216), 2*y_screen + 24 + 147, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*236), 2*y_screen + 24 + 179, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*256), 2*y_screen + 24 + 214, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*276), 2*y_screen + 24 + 253, "◯", COLOUR.extsprites[2])
+			draw.text(x_base  + dir*296), 2*y_screen + 24 + 295, "◯", COLOUR.extsprites[2])
+			
+			i = i + 1
+		end
 		
 		-- Sprites
 		table_x = 520
@@ -1426,6 +1471,13 @@ local function main_paint_function(authentic_paint, from_paint)
 				-- Draw info right above the sprite
 				draw.text(2*x_screen, 2*y_screen, fmt("#%02d", id/2), sprite_color)
 				draw.pixel(x_screen, y_screen, sprite_color, COLOUR.background) -- sprite position pixel
+				
+				--Draw boss HP right above it
+				if sprite_status == "B0" then -- Caveman boss -- in hex, due to sprite_status = string.upper(fmt("%02x", sprite_status))
+					draw.text(2*x_screen + 110, 2*y_screen + 10, fmt("HP: %d", boss_hp), COLOUR.text, COLOUR.warning_bg)					
+				elseif  sprite_status == "B6" then -- Tiger boss (Jungle 4)
+					draw.text(2*x_screen + 35, 2*y_screen + 80, fmt("HP: %d", boss_hp), COLOUR.text, COLOUR.warning_bg)
+				end
 				
 				sprite_count = sprite_count + 1
 			end
