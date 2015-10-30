@@ -1423,10 +1423,10 @@ local function main_paint_function(authentic_paint, from_paint)
 				dir = -1
 				x_off = -5
 			end
-			x_base = 2*x_screen + x_off + dir*(throw_power - 1)*7
 			for k = 0, throw_power, 2 do
-				draw.text(x_base  + dir*k*7, 2*y_screen + 24, "◯", COLOUR.extsprites[2])	
-			end	
+				draw.text(2*x_screen + x_off + dir*k*7, 2*y_screen + 24, "◯", COLOUR.extsprites[2])	
+			end
+			x_base = 2*x_screen + x_off + dir*(throw_power - 1)*7	
 			draw.text(x_base  + dir*24), 2*y_screen + 24 + 1, "◯", COLOUR.extsprites[2])
 			draw.text(x_base  + dir*48), 2*y_screen + 24 + 3, "◯", COLOUR.extsprites[2])
 			draw.text(x_base  + dir*70), 2*y_screen + 24 + 12, "◯", COLOUR.extsprites[2])
