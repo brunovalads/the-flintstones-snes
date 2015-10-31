@@ -79,6 +79,17 @@ CUSTOM_FONTS = {
         verysmall =       { file = [[data/verysmall.font]],        height = 08, width = 04 }, -- broken, unless for numerals
 }
 
+-- Bitmap strings (base64 encoded)
+local BMP_STRINGS = {}
+BMP_STRINGS.stone_animation = {}
+BMP_STRINGS.stone_animation[1] = "iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNvyMY98AAABkSURBVChTbY7BCcAwDAM9Rr4do2t0hayUmbJOR1ArwxmSNiBs5ENKSFo0zqarhTzx6vi+PM5+pO7RVwjAE8CyVxAVhtgBE7KBSQrJgJlECqbTLP6XEJV/wAfaAW4FWa7dAUnxAI4rvU4zOLOwAAAAAElFTkSuQmCC"
+BMP_STRINGS.stone_animation[2] = "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNvyMY98AAABgSURBVChTZY1BDcAwDAMDo9/BGI1RKKViKp1B8HSunM8erhL7nJYk6xkltO6hqjPjd4C559VqgAZ613QA+LtAGIidGdgAQ4A0szMbIIhBGMAlzgDFAMo3/oInEM3sR6oPOgiH3EzDH1oAAAAASUVORK5CYII="
+BMP_STRINGS.stone_animation[3] = "iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNvyMY98AAABmSURBVChTbY1REcAgDEMrg9/JmI1ZwBKasDMJZa+3FLjjIxtNXhtz91Svl6OnME7/CLS7hBJSiAjeVkNHSNsC7StRrWlrhQk1845zqsAI87/CQlzigyGQQBD/hBDAWidggxRqnnIbxeO8M4qNT0QAAAAASUVORK5CYII="
+BMP_STRINGS.stone_animation[4] = "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNvyMY98AAABhSURBVChTZY1LDcAwDEMDo9fBGI1RKKViKp1B8PIyOZq0g5uPX9yQ1LrXFNrzyPHd1bPOoWtEiR4ZKhP50lDkLXMBNMhfoAaJwfwmuQIVUE1GUp3kgwZsUA3/EjBtsJcUD4ILi9Qg/s7KAAAAAElFTkSuQmCC"
+BMP_STRINGS.stone_animation[5] = "iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNvyMY98AAABqSURBVChTXY5RFcAgDAMrg9/JmI1ZwBKaZmcSOo4tpfCR90pyTTF3D13FvJ2lj9NDMRBKT6s9wU4QDWoB2BUQm2rifddjQmrABBzmv4A3/HwGQ/MC5XNqAkC84+MCFTIjZQEhhYgzn+/2AnfrtbTjEEkYAAAAAElFTkSuQmCC"
+BMP_STRINGS.stone_animation[6] = "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNvyMY98AAABeSURBVChTTY1BDcAwDAMDo9/BGI1RKKViGp1B8HaRrtrDjeKc3UrSWucIuka19DdwzyOqPluokywebGLH39UYz5ptMjegoQRRfwFAA4ZNphswwQTgYGsDPMjkvz5JvfAkkmOVNQjjAAAAAElFTkSuQmCC"
+BMP_STRINGS.stone_animation[7] = "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNvyMY98AAABeSURBVChTTY7REcAgDEIzhr8do2u4gis5U9fpCFToPc8POBIIWpKC3koGMwg949K8W3CaRsjGO0dQa4V2YwIeaHDAjTGXTj2XPLVNAlygqc8fzgWaYAImgxCBv0H1AS8+ksPrW9AXAAAAAElFTkSuQmCC"
+
 -- Others
 local Y_CAMERA_OFF = 1  -- small adjustment for screen coordinates <-> object position conversion
 local INPUT_RAW_VALUE = "value"  -- name of the inner field in input.raw() for values
@@ -137,6 +148,15 @@ end
 local s24  = function(address, value) if value then memory2.WRAM:shword(address, value) else
     return memory.readshword("WRAM", address) end
 end
+
+-- Bitmaps and dbitmaps
+local BITMAPS = {}
+BITMAPS.stone_animation = {}
+for k = 1, 7 do
+	BITMAPS.stone_animation[k] = gui.image.load_png_str(BMP_STRINGS.stone_animation[k])
+	--BITMAPS.stone_animation[k]:adjust_transparency(200)
+end
+BMP_STRINGS = nil  -- bitmap-strings shall not be used past here
 
 --#############################################################################
 -- GAME SPECIFIC RESOURCES:
@@ -1424,23 +1444,25 @@ local function main_paint_function(authentic_paint, from_paint)
 				x_off = -5
 			end
 			for k = 0, throw_power, 2 do
-				draw.text(2*x_screen + x_off + dir*k*7, 2*y_screen + 24, "◯", COLOUR.extsprites[2])	
-			end
-			x_base = 2*x_screen + x_off + dir*(throw_power - 1)*7	
-			draw.text(x_base  + dir*24), 2*y_screen + 24 + 1, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*48), 2*y_screen + 24 + 3, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*70), 2*y_screen + 24 + 12, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*92), 2*y_screen + 24 + 23, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*114), 2*y_screen + 24 + 36, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*136), 2*y_screen + 24 + 52, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*156), 2*y_screen + 24 + 71, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*176), 2*y_screen + 24 + 93, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*196), 2*y_screen + 24 + 119, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*216), 2*y_screen + 24 + 147, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*236), 2*y_screen + 24 + 179, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*256), 2*y_screen + 24 + 214, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*276), 2*y_screen + 24 + 253, "◯", COLOUR.extsprites[2])
-			draw.text(x_base  + dir*296), 2*y_screen + 24 + 295, "◯", COLOUR.extsprites[2])
+				BITMAPS.stone_animation[k%(#BITMAPS.stone_animation)+1]:draw(2*x_screen + x_off + dir*k*7, 2*y_screen + 24)--, "◯", COLOUR.extsprites[2])	
+			end	
+			x_base = 2*x_screen + x_off + dir*(throw_power - 1)*7
+			local b = 1
+			local index = b%(#BITMAPS.stone_animation) + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*24, 2*y_screen + 24 + 1) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*48, 2*y_screen + 24 + 3) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*70, 2*y_screen + 24 + 12) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*92, 2*y_screen + 24 + 23) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*114, 2*y_screen + 24 + 36) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*136, 2*y_screen + 24 + 52) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*156, 2*y_screen + 24 + 71) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*176, 2*y_screen + 24 + 93) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*196, 2*y_screen + 24 + 119) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*216, 2*y_screen + 24 + 147) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*236, 2*y_screen + 24 + 179) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*256, 2*y_screen + 24 + 214) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*276, 2*y_screen + 24 + 253) b = b + 1
+			BITMAPS.stone_animation[index]:draw(x_base  + dir*296, 2*y_screen + 24 + 295)
 			
 			i = i + 1
 		end
@@ -1449,6 +1471,8 @@ local function main_paint_function(authentic_paint, from_paint)
 		table_x = 520
 		local sprite_count = 0
 		for id = 0, 2*FLINT.sprite_max, 2 do
+			draw.opacity(1, 1)
+			
 			local sprite_status = u8(WRAM.sprite_status +id)
 			local sprite_x = u16(WRAM.sprite_x +id)
 			local sprite_y = u16(WRAM.sprite_y +id)
@@ -1459,17 +1483,25 @@ local function main_paint_function(authentic_paint, from_paint)
 			local sprite_y_speed = s8(WRAM.sprite_y_speed +id)
 			local sprite_y_subspeed = u8(WRAM.sprite_y_subspeed +id)
 			local x_screen, y_screen = screen_coordinates(sprite_x, sprite_y, camera_x, camera_y)
+			
+			if 2*x_screen > 0 and 2*x_screen < 512 and 2*y_screen > 0 and 2*y_screen < 448 then
+				draw.opacity(1, 1)
+			else
+				draw.opacity(0.5, 1)
+			end
 
 			if sprite_status ~= 0 then -- slot is being used
 				sprite_status = string.upper(fmt("%02x", sprite_status))
 				local sprite_string = fmt("#%02d %s (%d.%02x, %d.%02x)", id/2, sprite_status, sprite_x, sprite_x_sub, sprite_y, sprite_y_sub)
 				local sprite_color = COLOUR.sprites[(id/2)%(#COLOUR.sprites) + 1]
 				
-				--draw.Font_name = "snes9xluaclever"
 				-- Draw the sprite table
+				--if x_screen > 512 then
+				--	draw.opacity(0.5, 1)
+				--end
 				draw.text(table_x, table_y + sprite_count * delta_y, sprite_string, sprite_color, COLOUR.background)
 				-- Draw info right above the sprite
-				draw.text(2*x_screen, 2*y_screen, fmt("#%02d", id/2), sprite_color)
+				draw.text(2*x_screen, 2*y_screen, fmt("#%02d", id/2), sprite_color, COLOUR.background, COLOUR.halo, true)
 				draw.pixel(x_screen, y_screen, sprite_color, COLOUR.background) -- sprite position pixel
 				
 				--Draw boss HP right above it
@@ -1482,6 +1514,7 @@ local function main_paint_function(authentic_paint, from_paint)
 				sprite_count = sprite_count + 1
 			end
 		end
+		draw.opacity(1, 1)
 		draw.text(table_x + 55, table_y - delta_y, fmt("Sprites: %02d", sprite_count), COLOUR.text, COLOUR.background)
 		
 		-- Extended Sprites
@@ -1492,6 +1525,8 @@ local function main_paint_function(authentic_paint, from_paint)
 		end
 		local extsprite_count = 0
 		for id = 0, 2*FLINT.extended_sprite_max, 2 do
+			draw.opacity(1, 1)
+			
 			local extsprite_status = u8(WRAM.extsprite_status +id)
 			local extsprite_x = u16(WRAM.extsprite_x +id)
 			local extsprite_y = u16(WRAM.extsprite_y +id)
@@ -1503,6 +1538,12 @@ local function main_paint_function(authentic_paint, from_paint)
 			local extsprite_y_subspeed = u8(WRAM.extsprite_y_subspeed +id)
 			local x_screen, y_screen = screen_coordinates(extsprite_x, extsprite_y, camera_x, camera_y)
 			
+			if 2*x_screen > 0 and 2*x_screen < 512 and 2*y_screen > 0 and 2*y_screen < 448 then
+				draw.opacity(1, 1)
+			else
+				draw.opacity(0.5, 1)
+			end
+			
 			if extsprite_status ~= 0 then -- slot is being used
 				extsprite_status = string.upper(fmt("%02x", extsprite_status))
 				local extsprite_string = fmt("#%02d %s (%d.%02x, %d.%02x)", id/2, extsprite_status, extsprite_x, extsprite_x_sub, extsprite_y, extsprite_y_sub)
@@ -1510,14 +1551,18 @@ local function main_paint_function(authentic_paint, from_paint)
 				
 				--draw.Font_name = "snes9xluaclever"
 				-- Draw the extended sprite table
+				if x_screen > 512 then
+					draw.opacity(0.5, 1)
+				end
 				draw.text(table_x, table_y + extsprite_count * delta_y, extsprite_string, extsprite_color, COLOUR.background)
 				-- Draw info right above the extended sprite
-				draw.text(2*x_screen, 2*y_screen, fmt("#%02d", id/2), extsprite_color)
+				draw.text(2*x_screen, 2*y_screen, fmt("#%02d", id/2), extsprite_color, COLOUR.background, COLOUR.halo, true)
 				draw.pixel(x_screen, y_screen, extsprite_color, COLOUR.background) -- extended sprite position pixel
 				
 				extsprite_count = extsprite_count + 1
 			end
 		end
+		draw.opacity(1, 1)
 		draw.text(table_x + 30, table_y - delta_y, fmt("Extd. sprites: %02d", extsprite_count), COLOUR.text, COLOUR.background)
 	end
 	
