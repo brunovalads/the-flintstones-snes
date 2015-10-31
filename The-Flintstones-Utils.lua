@@ -1484,7 +1484,7 @@ local function main_paint_function(authentic_paint, from_paint)
 			local sprite_y_subspeed = u8(WRAM.sprite_y_subspeed +id)
 			local x_screen, y_screen = screen_coordinates(sprite_x, sprite_y, camera_x, camera_y)
 			
-			if 2*x_screen > 0 and 2*x_screen < 512 and 2*y_screen > 0 and 2*y_screen < 448 then
+			if 2*x_screen >= 0 and 2*x_screen <= 512 and 2*y_screen >= 0 and 2*y_screen <= 448 then
 				draw.opacity(1, 1)
 			else
 				draw.opacity(0.5, 1)
@@ -1496,9 +1496,6 @@ local function main_paint_function(authentic_paint, from_paint)
 				local sprite_color = COLOUR.sprites[(id/2)%(#COLOUR.sprites) + 1]
 				
 				-- Draw the sprite table
-				--if x_screen > 512 then
-				--	draw.opacity(0.5, 1)
-				--end
 				draw.text(table_x, table_y + sprite_count * delta_y, sprite_string, sprite_color, COLOUR.background)
 				-- Draw info right above the sprite
 				draw.text(2*x_screen, 2*y_screen, fmt("#%02d", id/2), sprite_color, COLOUR.background, COLOUR.halo, true)
@@ -1538,7 +1535,7 @@ local function main_paint_function(authentic_paint, from_paint)
 			local extsprite_y_subspeed = u8(WRAM.extsprite_y_subspeed +id)
 			local x_screen, y_screen = screen_coordinates(extsprite_x, extsprite_y, camera_x, camera_y)
 			
-			if 2*x_screen > 0 and 2*x_screen < 512 and 2*y_screen > 0 and 2*y_screen < 448 then
+			if 2*x_screen >= 0 and 2*x_screen <= 512 and 2*y_screen >= 0 and 2*y_screen <= 448 then
 				draw.opacity(1, 1)
 			else
 				draw.opacity(0.5, 1)
@@ -1549,11 +1546,7 @@ local function main_paint_function(authentic_paint, from_paint)
 				local extsprite_string = fmt("#%02d %s (%d.%02x, %d.%02x)", id/2, extsprite_status, extsprite_x, extsprite_x_sub, extsprite_y, extsprite_y_sub)
 				local extsprite_color = COLOUR.extsprites[(id/2)%(#COLOUR.extsprites) + 1]
 				
-				--draw.Font_name = "snes9xluaclever"
 				-- Draw the extended sprite table
-				if x_screen > 512 then
-					draw.opacity(0.5, 1)
-				end
 				draw.text(table_x, table_y + extsprite_count * delta_y, extsprite_string, extsprite_color, COLOUR.background)
 				-- Draw info right above the extended sprite
 				draw.text(2*x_screen, 2*y_screen, fmt("#%02d", id/2), extsprite_color, COLOUR.background, COLOUR.halo, true)
@@ -1565,8 +1558,6 @@ local function main_paint_function(authentic_paint, from_paint)
 		draw.opacity(1, 1)
 		draw.text(table_x + 30, table_y - delta_y, fmt("Extd. sprites: %02d", extsprite_count), COLOUR.text, COLOUR.background)
 	end
-	
-	--create_button(200, 100, "TEST")
 	
 	--############################################################################################################
 	--############################################################################################################
