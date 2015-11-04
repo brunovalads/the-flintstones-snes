@@ -16,7 +16,7 @@ $7E0622|1 byte|Stage skip password flag.
 $7E0624|1 byte|Invincibility password flag.
 $7E0725|1 byte|Fred's graphical direction, maybe<sup>[[1]](/1./)</sup>: #40 = facing right, #104 = facing left. It's controlled by the effective direction ($7E0CB9).
 $7E0946|58 bytes|Sprite type table. Can be interpreted as a status sometimes.
-$7E0980|8 bytes|Extended sprite type table start. Uses these values from the sprite type table: #$10 = stone about to be thrown, #$11 = stone thrown, #$14 = bowling ball about to be thrown, #$15 = bowling ball thrown. Can be interpreted as a status sometimes.
+$7E0980|8 bytes|Extended sprite type table. Uses the values #$10, #$11, #$14 and #$15 from the sprite type table. Can be interpreted as a status sometimes.
 $7E098A|58 bytes|Sprite X position table.
 $7E09C4|8 bytes|Extended sprite X position table.
 $7E09CC|2 bytes|Y position.
