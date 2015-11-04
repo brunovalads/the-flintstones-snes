@@ -47,6 +47,12 @@ $7E0FF2|2 bytes|Last valid Y position to respawn (if the player falls on a pit).
 $7E0FF6|1 byte|Fred's status. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map%20Extra%20Info.md#7e0ff6---freds-status).
 $7E1000|1 byte|Is smashing flag. When #01, Fred hits enemies and rocks.
 $7E1010|1 byte|Something related to be standing still, increments by 4 every 8 frames.
+$7E101A|2 bytes|Selection cursor x position (in the table, not in pixels) in the Hiscore section when the player puts its name (when beats the game).
+$7E101C|2 bytes|Selection cursor y position (in the table, not in pixels) in the Hiscore section when the player puts its name (when beats the game).
+$7E101E|2 bytes|Position on Hiscore table, after beating the game.
+$7E1020|1 byte|Current character slot in the Hiscore section when the player puts its name (when beats the game). Can be interpreted as name size too.
+$7E1022|2 bytes|Only updated in the Hiscore section when the player puts its name (when beats the game). Increases every frame, looping between #00 and #07.
+$7E102E|8 bytes|Player name in Hiscores (while choosing it when beats the game), each byte for each character. #65~#90 = A~Z, #32 = blank space, #46 = not writen (dot). There are other valid values too (for numbers and special characters), but inaccessible.
 $7E140F|1 byte|Language option: #00 = brittish english, #01 = american english, #02 = spanish, #03 = german, #04 = italian, #05 = french.
 $7E1D51|1 byte|Invincibility timer. The player has 120 frames of invincibility after being hit or falling in a pit.
 $7E1D5B|1 byte|Current level. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map%20Extra%20Info.md#7e1d5b---current-level).
