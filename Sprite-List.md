@@ -1,6 +1,6 @@
 #Sprite List
 
-This is a complete mapping of the sprites used (and unused) in this game, by checking the sprite type table, the address **$7E0946**. Note: the sprite loaders are only found when the level is loading (black screen), and maybe are used during the level in the code internally. They load the sprite properly, you can check this by poking a value during the level, the loader sprite lasts for just one frame, then it loads the respective sprite.
+This is a complete mapping of the sprites used (and unused) in this game, by checking the sprite type table, the address **$7E0946**.<br>Note: the sprite loaders are only found when the level is loading (black screen), and maybe are used during the level in the code internally. They load the sprite properly, you can check this by poking a value during the level, the loader sprite lasts for just one frame, then it loads the respective sprite.
 
 ID|Name|Appearing|Notes
 :--:| :------ | :------ | :------ |
@@ -76,8 +76,8 @@ ID|Name|Appearing|Notes
 45|Jumping lava|Volcanic|
 46|Jumping lava spawner loader|Volcanic|
 47|Jumping lava spawner|Volcanic|
-48|**_[unused]_** ??? (uses part of Fred's graphics) loader|---------------|
-49|**_[unused]_** ??? (uses part of Fred's graphics)|---------------|
+48|**_[unused]_** ??? loader|---------------|
+49|**_[unused]_** ???|---------------|Uses part of Fred's graphics
 4A|Flame on wall loader|Volcanic|
 4B|Flame on wall|Volcanic|
 4C|Fire from steam (lava/duct) loader|Volcanic/Machine|
@@ -111,8 +111,8 @@ ID|Name|Appearing|Notes
 68|Springboard contraption|Quarry, Machine|Permanent sprite
 69|Boar dino loader|Quarry, Machine|
 6A|Boar dino|Quarry, Machine|
-6B|**_[unused]_** Falling rock (same graphics from sprite 19) loader|---------------|
-6C|**_[unused]_** Falling rock (same graphics from sprite 19)|---------------|
+6B|**_[unused]_** Falling rock loader|---------------|
+6C|**_[unused]_** Falling rock|---------------|Same graphics from sprite 19
 6D|Boulder that floats on lava loader|Volcanic|
 6E|Boulder that floats on lava|Volcanic|
 6F|Climbing lizard loader|Volcanic|
@@ -129,10 +129,10 @@ ID|Name|Appearing|Notes
 7A|Smashing square stone|Machine|
 7B|Smashing square stone controlled by Button (2B) loader|Machine|
 7C|Smashing square stone controlled by Button (2B)|Machine|Permanent sprite
-7D|**_[unused]_** Bouncing rock (same graphics from sprite 19) loader|---------------|
-7E|**_[unused]_** Bouncing rock (same graphics from sprite 19)|---------------|
-7F|**_[unused]_** ??? (uses Walking egg graphics) loader|---------------|
-80|**_[unused]_** ??? (uses Walking egg graphics)|---------------|
+7D|**_[unused]_** Bouncing rock loader|---------------|
+7E|**_[unused]_** Bouncing rock|---------------|Same graphics from sprite 19
+7F|**_[unused]_** ???loader|---------------|
+80|**_[unused]_** ???|---------------|Uses Walking egg graphics, kinda. Crashes the game.
 81|Walking egg loader|Quarry, Machine|
 82|Walking egg|Quarry, Machine|
 83|Walking egg hatching|Quarry, Machine|
@@ -167,8 +167,8 @@ ID|Name|Appearing|Notes
 A0|Worker|Quarry, Machine|
 A1|Worker pushing boulder loader|Quarry, Machine|
 A2|Worker pushing boulder|Quarry, Machine|Then becomes A0
-A3|**_[unused]_** ??? (unfinished Worker that throws) loader|---------------|
-A4|**_[unused]_** ??? (unfinished Worker that throws)|---------------|
+A3|**_[unused]_** ??? loader|---------------|
+A4|**_[unused]_** ???|---------------|Unfinished Worker that throws, maybe. Crashes the game.
 A5|Worker loader|Quarry, Machine|
 A6|Worker|Quarry, Machine|
 A7|Lizard on contraption loader|Quarry, Machine|
@@ -177,8 +177,8 @@ A9|Spinning disc from Worker loader|Quarry, Machine|
 AA|Spinning disc from Worker|Quarry, Machine|
 AB|Boulder from Worker loader|Quarry, Machine|
 AC|Boulder from Worker|Quarry, Machine|
-AD|**_[unused]_** ??? (kind of sprite 80 layer) loader|---------------|
-AE|**_[unused]_** ??? (kind of sprite 80 layer)|---------------|
+AD|**_[unused]_** ??? loader|---------------|
+AE|**_[unused]_** ???|---------------|Lays the sprite 80
 AF|Caveman boss loader|Quarry 3|
 B0|Caveman boss|Quarry 3|
 B1|Caveman boss projectile loader|Quarry 3|
@@ -243,8 +243,8 @@ EB|Mammoth standing still|Jungle|
 EC|Mammoth running|Jungle|
 ED|Bamm-Bamm and Pebbles symbols loader|Bedrock|
 EE|Bamm-Bamm and Pebbles symbols|Bedrock|
-EF|Arrow pointing kids [Bedrock 1] loader|Bedrock|
-F0|Arrow pointing kids [Bedrock 1]|Bedrock|
+EF|Arrow pointing kids loader|Bedrock|
+F0|Arrow pointing kids|Bedrock|
 F1|Deadly plant (standing still) loader|Jungle|
 F2|Deadly plant (standing still)|Jungle|
 F3|Deadly plant (using "tongue")|Jungle|
