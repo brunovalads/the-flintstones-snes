@@ -1,6 +1,6 @@
 #Sprite List
 
-This is a complete mapping of the sprites used (and unused) in this game, by checking the sprite type table, the address **$7E0946**.
+This is a complete mapping of the sprites used (and unused) in this game, by checking the sprite type table, the address **$7E0946**. Note: the sprite loaders are only found when the level is loading (black screen), and maybe are used during the level in the code internally. They load the sprite properly, you can check this by poking a value during the level, the loader sprite lasts for just one frame, then it loads the respective sprite.
 
 ID|Name|Appearing|Notes
 :--:| :------ | :------ | :------ |
@@ -54,8 +54,8 @@ ID|Name|Appearing|Notes
 2F|**_[unused]_** Coin thing|---------------|Rotates a bit when Fred pass through it for the first time
 30|Disappearing platform loader|Volcanic|
 31|Disappearing platform|Volcanic|
-32|Hidden platform loader|Quarry|
-33|Hidden platform|Quarry|Activated by sprites 2B or A8
+32|Hidden platform loader|Quarry, Machine|
+33|Hidden platform|Quarry, Machine|Activated by sprites 2B or A8
 34|Floating rock platform loader|Volcanic|
 35|Floating rock platform |Volcanic|
 36|Floating rock platform (moving) loader|Volcanic|
@@ -108,7 +108,7 @@ ID|Name|Appearing|Notes
 65|Boulder limit rock loader|General|
 66|Boulder limit rock|General|
 67|Springboard contraption loader|Quarry, Machine|
-68|Springboard contraption|Quarry, Machine|
+68|Springboard contraption|Quarry, Machine|Permanent sprite
 69|Boar dino loader|Quarry, Machine|
 6A|Boar dino|Quarry, Machine|
 6B|**_[unused]_** Falling rock (same graphics from sprite 19) loader|---------------|
@@ -128,15 +128,15 @@ ID|Name|Appearing|Notes
 79|Smashing square stone loader|Machine|
 7A|Smashing square stone|Machine|
 7B|Smashing square stone controlled by Button (2B) loader|Machine|
-7C|Smashing square stone controlled by Button (2B)|Machine|
+7C|Smashing square stone controlled by Button (2B)|Machine|Permanent sprite
 7D|**_[unused]_** Bouncing rock (same graphics from sprite 19) loader|---------------|
 7E|**_[unused]_** Bouncing rock (same graphics from sprite 19)|---------------|
 7F|**_[unused]_** ??? (uses Walking egg graphics) loader|---------------|
 80|**_[unused]_** ??? (uses Walking egg graphics)|---------------|
-81|Walking egg loader|Quarry|
-82|Walking egg|Quarry|
-83|Walking egg hatching|Quarry|
-84|Baby pterodactyl from Walking egg|Quarry|
+81|Walking egg loader|Quarry, Machine|
+82|Walking egg|Quarry, Machine|
+83|Walking egg hatching|Quarry, Machine|
+84|Baby pterodactyl from Walking egg|Quarry, Machine|
 85|Gorilla loader|Jungle|
 86|Gorilla|Jungle|
 87|Falling leaves loader|Jungle|
@@ -148,7 +148,7 @@ ID|Name|Appearing|Notes
 8D|Platform in mud loader|Jungle|
 8E|Platform in mud|Jungle|
 8F|Button on wall loader|Machine|
-90|Button on wall|Machine|Changes sprite 78 direction
+90|Button on wall|Machine|Permanent sprite, changes sprite 78 direction
 91|Platform in Lava jet loader|Volcanic|
 92|Platform in Lava jet|Volcanic|
 93|Lava jet loader|Volcanic|
@@ -165,18 +165,18 @@ ID|Name|Appearing|Notes
 9E|Worker that throws Spinning discs|Quarry, Machine|
 9F|Worker loader|Quarry, Machine|
 A0|Worker|Quarry, Machine|
-A1|Worker pushing boulder loader|Quarry|
-A2|Worker pushing boulder|Quarry|Then becomes A0
+A1|Worker pushing boulder loader|Quarry, Machine|
+A2|Worker pushing boulder|Quarry, Machine|Then becomes A0
 A3|**_[unused]_** ??? (unfinished Worker that throws) loader|---------------|
 A4|**_[unused]_** ??? (unfinished Worker that throws)|---------------|
 A5|Worker loader|Quarry, Machine|
 A6|Worker|Quarry, Machine|
-A7|Lizard on contraption loader|Quarry|
-A8|Lizard on contraption|Quarry|Activates sprite 33
+A7|Lizard on contraption loader|Quarry, Machine|
+A8|Lizard on contraption|Quarry, Machine|Activates sprite 33
 A9|Spinning disc from Worker loader|Quarry, Machine|
 AA|Spinning disc from Worker|Quarry, Machine|
-AB|Boulder from Worker loader|Quarry|
-AC|Boulder from Worker|Quarry|
+AB|Boulder from Worker loader|Quarry, Machine|
+AC|Boulder from Worker|Quarry, Machine|
 AD|**_[unused]_** ??? (kind of sprite 80 layer) loader|---------------|
 AE|**_[unused]_** ??? (kind of sprite 80 layer)|---------------|
 AF|Caveman boss loader|Quarry 3|
@@ -204,7 +204,7 @@ C4|Sparkle from item|General|
 C5|Bamm-Bamm loader|Bedrock|
 C6|Bamm-Bamm and Pebbles first frame or touching car/balcony|Bedrock|
 C7|Bamm-Bamm and Pebbles jumping form car|Bedrock|
-C8|Bamm-Bamm and Pebbles|Bedrock|
+C8|Bamm-Bamm and Pebbles|Bedrock|Permanent sprite
 C9|Bamm-Bamm and Pebbles falling on ground|Bedrock|
 CA|Pebbles loader|Bedrock|
 CB|Pterodactyl standing still loader|Bedrock|
@@ -218,18 +218,18 @@ D2|"Tongue" from Deadly plant (growing)|Jungle|
 D3|"Tongue" from Deadly plant (full growth)|Jungle|
 D4|"Tongue" from Deadly plant (shrinking)|Jungle|
 D5|First bridge segment loader|Jungle|
-D6|First bridge segment|Jungle|
+D6|First bridge segment|Jungle|Permanent sprite
 D7|First bridge segment jumping|Jungle|
 D8|First bridge segment attaching|Jungle|
 D9|Bridge segment (not ready) loader|Jungle|
 DA|Bridge segment (not ready)|Jungle|
 DB|Bridge segment attaching|Jungle|
-DC|Bridge segment forming bridge|Jungle|
+DC|Bridge segment forming bridge|Jungle|Permanent sprite
 DD|Bridge segment falling|Jungle|
 DE|Woodpecker on bridge loader|Jungle|
 DF|Woodpecker on bridge|Jungle|
 E0|Woodpecker pecking|Jungle|
-E1|Woodpecker after pecking|Jungle|
+E1|Woodpecker after pecking|Jungle|Permanent sprite
 E2|Mud bubbles loader|Jungle|
 E3|Mud bubbles|Jungle|
 E4|Tar projectile  first frame being thrown|Jungle|
