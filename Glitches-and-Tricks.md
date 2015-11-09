@@ -16,6 +16,7 @@
  <br>
  <br>
  <br>
+ <br>
 
 <img src=http://i.imgur.com/FCUrfs7.gif align=right>
 - Jumping to a ledge from behind you hit an invisible solid block.<br>
@@ -48,6 +49,8 @@
 
 <img src=http://i.imgur.com/AVuWqDc.png align=right>
 - In the Password screen, Fred creates the dust from walking, but it's invisible, static, and lasts forever.<br>
+ <br>
+ <br>
  <br>
  <br>
  <br>
