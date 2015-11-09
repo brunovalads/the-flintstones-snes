@@ -56,6 +56,9 @@
  <br>
  <br>
  <br>
+ <br>
+ <br>
+ <br>
 
 <img src=http://i.imgur.com/sc0MY1n.gif align=right>
 - Throwing a stone when sticked to a wall makes it falls straight down and passing through the floor. You can do this from sticked to the wall to 12 pixels away from it.<br>
