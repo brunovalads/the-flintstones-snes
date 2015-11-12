@@ -10,11 +10,13 @@ Address|     Size     |Description
 :------------: | :-------------: | ------------- 
 $7E0018|2 bytes|Camera X position.
 $7E001A|2 bytes|Camera Y position.
-$7E003C|1 byte|Game Mode, maybe<sup>[[1]](/1./)</sup>:<br>#03 = Title screen,<br>#09 = Level name with Snes controller,<br>#25 = Game Over,<br>#41 = Options,<br>#50 = Boss (Quarry 3),<br>#67 = Level (Jungle 1, 2, 3), Boss (Jungle 4),<br>#80 = Level (Bedrock 1),<br>#96 = Level (Machine 2, 3),<br>#108 = Level (Volcanic 1),<br>#120 = Level (Quarry 1, 2, Machine 1),<br>#132 = Level (Volcanic 2),<br>#173 = Level (Volcanic 3),<br>#222 = Password screen,<br>#246 = Ocean logo intro + language option,<br>#247 = Cutscene,<br>#253 = Hiscores / Credits|
+$7E003C|1 byte|Graphics set, maybe<sup>[[1]](/1./)</sup>. A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e003c---graphics-set-maybe).
+$7E0040|2 bytes|Game mode.  A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e0040-2-bytes---game-mode).
 $7E008C|2 bytes|Frame counter, maybe<sup>[[1]](/1./)</sup>. Resets to zero during screen transitions, and pauses when the game is paused.|
 $7E0622|1 byte|Stage skip password flag.
 $7E0624|1 byte|Invincibility password flag.
 $7E0725|1 byte|Fred's graphical direction, maybe<sup>[[1]](/1./)</sup>: #40 = facing right, #104 = facing left. It's controlled by the effective direction ($7E0CB9).
+$7E0944|1 byte|Fred is loaded flag. #$01 = Fred is loaded, in levels, cutscenes, Password screen, Ocean intro. Also is #$02 when is walking in cutscenes and #$03 when jumping in cutscenes.
 $7E0946|58 bytes|Sprite type table. Can be interpreted as a status sometimes.
 $7E0980|8 bytes|Extended sprite type table. Uses the values #$10, #$11, #$14 and #$15 from the sprite type table. Can be interpreted as a status sometimes.
 $7E098A|58 bytes|Sprite X position table.
