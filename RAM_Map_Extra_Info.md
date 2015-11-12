@@ -1,6 +1,42 @@
 #RAM Map Extra Info
 ---
-###$7E0A98 - Fred's animation poses.
+###$7E003C - Graphics set, *_maybe_*
+Note: the address $7E003D seems to be part of it too, since is #$A7 only in levels, cutscenes, Password, Hiscores, intro, language option; and is #$A8 in the rest.
+
+Value (in hex)|Description
+|:---:|---|
+03|Title screen
+09|Level name with Snes controller
+19|Game Over
+29|Options
+32|Boss (Quarry 3)
+43|Level (Jungle 1, 2, 3), Boss (Jungle 4)
+50|Level (Bedrock 1)
+60|Level (Machine 2, 3)
+6C|Level (Volcanic 1)
+78|Level (Quarry 1, 2, Machine 1)
+84|Level (Volcanic 2)
+AD|Level (Volcanic 3)
+DE|Password screen
+F6|Ocean logo intro + language option
+F7|Cutscenes
+FD|Hiscores, Credits
+---
+###$7E0040 (2 bytes) - Game Mode
+Value (in hex)|Description
+|:---:|---|
+87B5|Title screen
+87CD|Cutscenes
+8DAA|Hiscores
+B23B|Level
+BC5B|Password screen
+C1CD|Options
+CA42|Level name
+CB8A|Game over screen
+CED7|Intro
+D18E|Language option
+---
+###$7E0A98 - Fred's animation poses
 *Under construction*
 
 ---
