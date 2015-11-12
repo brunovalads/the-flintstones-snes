@@ -15,6 +15,7 @@ $7E0040|2 bytes|Game mode.  A list of valid values can be found [here](./RAM_Map
 $7E008C|2 bytes|Frame counter, maybe<sup>[[1]](/1./)</sup>. Resets to zero during screen transitions, and pauses when the game is paused.|
 $7E0622|1 byte|Stage skip password flag.
 $7E0624|1 byte|Invincibility password flag.
+$7E0636|1 byte|Is paused flag.
 $7E0725|1 byte|Fred's graphical direction, maybe<sup>[[1]](/1./)</sup>: #40 = facing right, #104 = facing left. It's controlled by the effective direction ($7E0CB9).
 $7E0944|1 byte|Fred is loaded flag. #$01 = Fred is loaded, in levels, cutscenes, Password screen, Ocean intro. Also is #$02 when is walking in cutscenes and #$03 when jumping in cutscenes.
 $7E0946|58 bytes|Sprite type table. Can be interpreted as a status sometimes.
