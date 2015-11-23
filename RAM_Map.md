@@ -62,7 +62,7 @@ $7E1D65|1 byte|Lives.
 $7E1D69|1 byte|Health (Fred faces in the life counter, #02 = normal, #01 = tongue out, #00 = tongue out and spiked hair).
 $7E1D6D|1 byte|Stones.
 $7E1D71|1 byte|Bowling balls.
-$7E1D75|2 bytes|Score. The maximum score you can see is 042767, which corresponds to $1D75 = 15 and $1D76 = 167, any point further the addresses are updated normally, but the counter becomes 000000. Note: the first digit on the counter is never used, there isn't a RAM address for it.
+$7E1D75|2 bytes|Score. The maximum score you can see is 042767, which corresponds to $1D75 = 15 and $1D76 = 167, any point further the addresses are updated normally, but the counter becomes 000000, and you won't get in the Hiscores. Note: the first digit on the counter is never used, there isn't a RAM address for it.
 $7E1D8D|2 bytes|Time. Each game second takes 64 frames, so in NTSC (60Hz), 16 game seconds = 15 real seconds.
 $7E1D95|1 byte|Score counter on screen, 6th digit.
 $7E1D97|1 byte|Score counter on screen, 5th digit.
