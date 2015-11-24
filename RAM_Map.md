@@ -8,8 +8,8 @@
 
 Address|     Size     |Description
 :------------: | :-------------: | ------------- 
-$7E0018|2 bytes|Camera X position.
-$7E001A|2 bytes|Camera Y position.
+$7E001C|2 bytes|Camera X position.
+$7E001E|2 bytes|Camera Y position.
 $7E003C|1 byte|Graphics set, maybe<sup>[[1]](/1./)</sup>. A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e003c---graphics-set-maybe).
 $7E0040|2 bytes|Game mode.  A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e0040-2-bytes---game-mode).
 $7E008C|2 bytes|Frame counter, maybe<sup>[[1]](/1./)</sup>. Resets to zero during screen transitions, and pauses when the game is paused.|
