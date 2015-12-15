@@ -92,7 +92,7 @@ ID|Name|Appearing|Notes
 55|Giant rolling boulder|Machine|
 56|Bouncing toxic rock loader|Machine|
 57|Bouncing toxic rock|Machine|
-58|Sprite dying |General|
+58|Sprite dying|General|Frog, Worker, Gorilla, Tar creature, Deadly plant, Monkey, Climbing lizard
 59|Falling boulder spawner loader|Machine|
 5A|Falling boulder spawner|Machine|
 5B|Rock and toxic rock from tubes loader|Machine|
@@ -108,7 +108,7 @@ ID|Name|Appearing|Notes
 65|Boulder limit rock loader|General|
 66|Boulder limit rock|General|
 67|Springboard contraption loader|Quarry, Machine|
-68|Springboard contraption|Quarry, Machine|Permanent sprite
+68|Springboard contraption|Quarry, Machine|Permanent sprite. Activated by Boar dinos or bowling balls
 69|Boar dino loader|Quarry, Machine|
 6A|Boar dino|Quarry, Machine|
 6B|**_[unused]_** Falling rock loader|---------------|
