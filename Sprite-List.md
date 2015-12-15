@@ -202,7 +202,7 @@ C2|Surf board|Volcanic|
 C3|Sparkle from item loader|General|
 C4|Sparkle from item|General|
 C5|Bamm-Bamm loader|Bedrock|
-C6|Bamm-Bamm and Pebbles first frame or touching car/balcony|Bedrock|
+C6|Bamm-Bamm and Pebbles first frame or touching things|Bedrock|Things: car, pterodactyls, balconies
 C7|Bamm-Bamm and Pebbles jumping form car|Bedrock|
 C8|Bamm-Bamm and Pebbles|Bedrock|Permanent sprite
 C9|Bamm-Bamm and Pebbles falling on ground|Bedrock|
