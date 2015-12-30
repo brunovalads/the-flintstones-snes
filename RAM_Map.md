@@ -14,10 +14,18 @@ $7E003C|1 byte|Graphics set, maybe<sup>[[1]](/1./)</sup>. A list of valid values
 $7E0040|2 bytes|Game mode.  A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e0040-2-bytes---game-mode).
 $7E004A|1 byte|Mirror of $7E1E12. 
 $7E008C|2 bytes|Frame counter, maybe<sup>[[1]](/1./)</sup>. Resets to zero during screen transitions, and pauses when the game is paused.|
-$7E00D7|2 bytes|Fred's hitbox corner 1 x pos. Considering a rectangle with corner 2 beign the opposite corner of 1
-$7E00DB|2 bytes|Fred's hitbox corner 1 y pos.
+$7E00D7|2 bytes|[Considering a rectangle with corner 2 beign the opposite corner of 1]<br>Fred's hitbox corner 1 x pos.
 $7E00D9|2 bytes|Fred's hitbox corner 2 x pos.
+$7E00DB|2 bytes|Fred's hitbox corner 1 y pos.
 $7E00DD|2 bytes|Fred's hitbox corner 2 y pos.
+$7E00DF|2 bytes|Sprite platforming interaction left point x pos.
+$7E00E1|2 bytes|Sprite platforming interaction right point x pos.
+$7E00E3|2 bytes|Sprite platforming interaction left point y pos.
+$7E00E5|2 bytes|Sprite platforming interaction right point y pos.
+$7E00E7|2 bytes|[Considering a rectangle with corner 2 beign the opposite corner of 1]<br>Club hitbox corner 1 x pos.
+$7E00E9|2 bytes|Club hitbox corner 2 x pos.
+$7E00EB|2 bytes|Club hitbox corner 1 y pos.
+$7E00ED|2 bytes|Club hitbox corner 2 y pos.
 $7E0622|1 byte|Stage skip password flag.
 $7E0624|1 byte|Invincibility password flag.
 $7E0636|1 byte|Is paused flag.
