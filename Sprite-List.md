@@ -37,7 +37,7 @@ ID|Name|Appearing|Notes
 1E|Dust from walking loader|General|
 1F|Dust from walking|General|
 20|Items from rocks loader|General|
-21|Items from rocks|General|Hourglass, Trophy, Gem, Sphere, Life, Giant gem
+21|Items from rocks|General|It can be Trophy, Life, Hourglass, Gem, Sphere, Big diamond, or Big gem, according to the Misc table 1.
 22|Gem (spawned naturaly) loader|General|
 23|Gem (spawned naturaly)|General|
 24|Trophy (spawned naturaly) loader|Jungle|
