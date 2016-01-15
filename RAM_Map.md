@@ -45,7 +45,7 @@ $7E0A4D|8 bytes|Extended sprite accumulated X subpixels table.
 $7E0A55|1 byte|Accumulated Y subpixels.
 $7E0A57|58 bytes|Sprite accumulated Y subpixels table.
 $7E0A91|8 bytes|Extended sprite accumulated Y subpixels table.
-$7E0A98|2 bytes<sup>[[1]](/1./)</sup>|Fred's animation poses. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map%20Extra%20Info.md#7e0a98---freds-animation-poses).
+$7E0A98|2 bytes<sup>[[1]](/1./)</sup>|Fred's animation poses. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM_Map_Extra_Info.md#7e0a98---freds-animation-poses).
 $7E0A9A|58 bytes|Sprite animation table, maybe<sup>[1][1]</sup>.
 $7E0AD4|8 bytes|Extended sprite animation table, maybe<sup>[[1]](/1./)</sup>.
 $7E0ADE|58 bytes|Sprite misc table 1.
@@ -69,7 +69,9 @@ $7E0ED0|8 bytes|Extended sprite is on ground flag.
 $7E0FEE|2 bytes|Mirror of X speed ($7E0D84). The low byte resets to 255 when not playing.
 $7E0FF0|2 bytes|Last valid X position to respawn (if the player falls on a pit).
 $7E0FF2|2 bytes|Last valid Y position to respawn (if the player falls on a pit).
-$7E0FF6|1 byte|Fred's status. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map%20Extra%20Info.md#7e0ff6---freds-status).
+$7E0FF6|1 byte|Fred's status. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM_Map_Extra_Info.md#7e0ff6---freds-status).
+$7E0FF8|2 bytes|X starting position in levels, Game Over screen and Password screen.
+$7E0FFA|2 bytes|Y starting position in levels, Game Over screen and Password screen.
 $7E1000|1 byte|Is smashing flag. When #01, Fred hits enemies and rocks.
 $7E1010|1 byte|Something related to be standing still, increments by 4 every 8 frames.
 $7E101A|2 bytes|Selection cursor x position (in the table, not in pixels) in the Hiscore section when the player puts its name (when beats the game).
@@ -80,12 +82,14 @@ $7E1022|2 bytes|Only updated in the Hiscore section when the player puts its nam
 $7E102E|8 bytes|Player name in Hiscores (while choosing it when beats the game), each byte for each character. #65~#90 = A~Z, #32 = blank space, #46 = not writen (dot). There are other valid values too (for numbers and special characters), but inaccessible.
 $7E1066|1 byte|Platform in mud pointer, it's the number of the current platform to rise. Updates right when you step on these platforms.
 $7E140F|1 byte|Language option: #00 = brittish english, #01 = american english, #02 = spanish, #03 = german, #04 = italian, #05 = french.
+$7E1485|2 bytes|Width of the current level, in blocks. $7E15B6 seems like a mirror of the low byte.
+$7E1487|2 bytes|Height of the current level, in blocks.
 $7E1D51|1 byte|Invincibility timer. The player has 120 frames of invincibility after being hit or falling in a pit.
-$7E1D5B|1 byte|Current level. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map%20Extra%20Info.md#7e1d5b---current-level).
-$7E1D65|1 byte|Lives.
-$7E1D69|1 byte|Health (Fred faces in the life counter, #02 = normal, #01 = tongue out, #00 = tongue out and spiked hair).
-$7E1D6D|1 byte|Stones.
-$7E1D71|1 byte|Bowling balls.
+$7E1D5B|1 byte|Current level. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM_Map_Extra_Info.md#7e1d5b---current-level).
+$7E1D65|2 bytes|Lives.
+$7E1D69|2 bytes|Health (Fred faces in the life counter, #02 = normal, #01 = tongue out, #00 = tongue out and spiked hair).
+$7E1D6D|2 bytes|Stones.
+$7E1D71|2 bytes|Bowling balls.
 $7E1D75|2 bytes|Score. The maximum score you can see is 042767, which corresponds to $1D75 = 15 and $1D76 = 167, any point further the addresses are updated normally, but the counter becomes 000000, and you won't get in the Hiscores. Note: the first digit on the counter is never used, there isn't a RAM address for it.
 $7E1D8D|2 bytes|Time. Each game second takes 64 frames, so in NTSC (60Hz), 16 game seconds = 15 real seconds.
 $7E1D95|1 byte|Score counter on screen, 6th digit.
@@ -124,8 +128,12 @@ $7E1E0E|2 bytes|Lava flood (in Volcanic 2) y pos (static).
 $7E1E10|2 bytes|Lava flood (in Volcanic 2) y pos (oscillating).
 $7E1E12|1 byte|Lava flood (in Volcanic 2) y pos in screen.
 $7E1ED6|1 byte|Boss HP. The Caveman boss (Quarry 3) has #15, the Tiger boss (Jungle 4) has #5.
+$7E2000|2 bytes|Width of the level loaded, in blocks. Is set during the level loading/name screen.
+$7E2002|2 bytes|Height of the level loaded, in blocks. Is set during the level loading/name screen.
+$7E2004|? bytes<sup>[[1]](/1./)</sup>|Map16 table of tiles (low byte). It's more like the ID of the tile, e.g.: #$9f = blank tile. A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e2004---map16-table-of-tiles-low-byte).
+$7E2005|? bytes<sup>[[1]](/1./)</sup>|Map16 table of tiles (high byte). It's more like the properties of the tile. A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e2005---map16-table-of-tiles-high-byte).
 
 ###Observations:
 1. These addresses need further research, since I'm just one and started this study just some months ago.
 
-[1]: https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM%20Map.md#observations
+[1]: https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM_Map.md#observations
