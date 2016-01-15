@@ -90,3 +90,13 @@ Value (in hex)|Description
 12|Volcanic 4 (boss) [UNUSED]
 13|Machine 4 (boss) [UNUSED]
 ---
+
+###$7E2004 - Map16 table of tiles (low byte)
+*Under construction*
+
+---
+
+###$7E2005 - Map16 table of tiles (high byte)
+*Under construction*
+
+---
