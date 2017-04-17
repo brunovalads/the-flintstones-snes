@@ -1,4 +1,4 @@
-#RAM Map
+# RAM Map
 
 **Notes before reading**:<br>
 - There are 29 sprite slots, and 4 extended sprite slots;
@@ -10,10 +10,10 @@ Address|     Size     |Description
 :------------: | :-------------: | ------------- 
 $7E001C|2 bytes|Camera X position.
 $7E001E|2 bytes|Camera Y position.
-$7E003C|1 byte|Graphics set, maybe<sup>[[1]](/1./)</sup>. A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e003c---graphics-set-maybe).
+$7E003C|1 byte|Graphics set, maybe<sup>[[1]]</sup>. A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e003c---graphics-set-maybe).
 $7E0040|2 bytes|Game mode.  A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e0040-2-bytes---game-mode).
 $7E004A|1 byte|Mirror of $7E1E12. 
-$7E008C|2 bytes|Frame counter, maybe<sup>[[1]](/1./)</sup>. Resets to zero during screen transitions, and pauses when the game is paused.|
+$7E008C|2 bytes|Frame counter, maybe<sup>[[1]]</sup>. Resets to zero during screen transitions, and pauses when the game is paused.|
 $7E00D7|2 bytes|[Considering a rectangle with corner 2 beign the opposite corner of 1]<br>Fred's hitbox corner 1 x pos.
 $7E00D9|2 bytes|Fred's hitbox corner 2 x pos.
 $7E00DB|2 bytes|Fred's hitbox corner 1 y pos.
@@ -29,7 +29,7 @@ $7E00ED|2 bytes|Club hitbox corner 2 y pos.
 $7E0622|1 byte|Stage skip password flag.
 $7E0624|1 byte|Invincibility password flag.
 $7E0636|1 byte|Is paused flag.
-$7E0725|1 byte|Fred's graphical direction, maybe<sup>[[1]](/1./)</sup>: #40 = facing right, #104 = facing left. It's controlled by the effective direction ($7E0CB9).
+$7E0725|1 byte|Fred's graphical direction, maybe<sup>[[1]]</sup>: #40 = facing right, #104 = facing left. It's controlled by the effective direction ($7E0CB9).
 $7E0944|1 byte|Fred is loaded flag. #$01 = Fred is loaded, in levels, cutscenes, Password screen, Ocean intro. Also is #$02 when is walking in cutscenes and #$03 when jumping in cutscenes.
 $7E0946|58 bytes|Sprite type table. Can be interpreted as a status sometimes.
 $7E0980|8 bytes|Extended sprite type table. Uses the values #$10, #$11, #$14 and #$15 from the sprite type table. Can be interpreted as a status sometimes.
@@ -45,9 +45,9 @@ $7E0A4D|8 bytes|Extended sprite accumulated X subpixels table.
 $7E0A55|1 byte|Accumulated Y subpixels.
 $7E0A57|58 bytes|Sprite accumulated Y subpixels table.
 $7E0A91|8 bytes|Extended sprite accumulated Y subpixels table.
-$7E0A98|2 bytes<sup>[[1]](/1./)</sup>|Fred's animation poses. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM_Map_Extra_Info.md#7e0a98---freds-animation-poses).
-$7E0A9A|58 bytes|Sprite animation table, maybe<sup>[1][1]</sup>.
-$7E0AD4|8 bytes|Extended sprite animation table, maybe<sup>[[1]](/1./)</sup>.
+$7E0A98|2 bytes<sup>[[1]]</sup>|Fred's animation poses. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM_Map_Extra_Info.md#7e0a98---freds-animation-poses).
+$7E0A9A|58 bytes|Sprite animation table, maybe<sup>[[1]]</sup>.
+$7E0AD4|8 bytes|Extended sprite animation table, maybe<sup>[[1]]</sup>.
 $7E0ADE|58 bytes|Sprite misc table 1.
 $7E0B18|8 bytes|Extended sprite misc table 1.
 $7E0B22|58 bytes|Sprite misc table 2.
@@ -56,7 +56,7 @@ $7E0B66|58 bytes|Sprite misc table 3.
 $7E0BA0|8 bytes|Extended sprite misc table 3.
 $7E0BAA|58 bytes|Sprite misc table 4.
 $7E0BE4|8 bytes|Extended sprite misc table 4.
-$7E0CB9|1 byte|Fred's effective direction, maybe<sup>[[1]](/1./)</sup>: #00 = facing right, #64 = facing left.
+$7E0CB9|1 byte|Fred's effective direction, maybe<sup>[[1]]</sup>: #00 = facing right, #64 = facing left.
 $7E0CFD|1 byte|Something related with which layer does Fred overlay. #32 = in normal game, some stuff overlay Fred; #48 = in dying animation, Fred overlays everything execpt sprites.
 $7E0D84|2 bytes|X speed. The low byte is the subspeed, in subpixels/frame, and the high byte is the speed, in pixels/frame.
 $7E0D86|58 bytes|Sprite X speed table. The low byte is the subspeed, in subpixels/frame, and the high byte is the speed, in pixels/frame.
@@ -130,10 +130,10 @@ $7E1E12|1 byte|Lava flood (in Volcanic 2) y pos in screen.
 $7E1ED6|1 byte|Boss HP. The Caveman boss (Quarry 3) has #15, the Tiger boss (Jungle 4) has #5.
 $7E2000|2 bytes|Width of the level loaded, in blocks. Is set during the level loading/name screen.
 $7E2002|2 bytes|Height of the level loaded, in blocks. Is set during the level loading/name screen.
-$7E2004|? bytes<sup>[[1]](/1./)</sup>|Map16 table of tiles (low byte). It's more like the ID of the tile, e.g.: #$9f = blank tile. A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e2004---map16-table-of-tiles-low-byte).
-$7E2005|? bytes<sup>[[1]](/1./)</sup>|Map16 table of tiles (high byte). It's more like the properties of the tile. A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e2005---map16-table-of-tiles-high-byte).
+$7E2004|? bytes<sup>[[1]]</sup>|Map16 table of tiles (low byte). It's more like the ID of the tile, e.g.: #$9f = blank tile. A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e2004---map16-table-of-tiles-low-byte).
+$7E2005|? bytes<sup>[[1]]</sup>|Map16 table of tiles (high byte). It's more like the properties of the tile. A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e2005---map16-table-of-tiles-high-byte).
 
-###Observations:
+### Observations:
 1. These addresses need further research, since I'm just one and started this study just some months ago.
 
 [1]: https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM_Map.md#observations
