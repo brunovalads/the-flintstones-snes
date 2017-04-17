@@ -1,4 +1,4 @@
-#Sprite List
+# Sprite List
 
 This is a complete mapping of the sprites used (and unused) in this game, by checking the sprite type table, the address **$7E0946**.<br>Note: the sprite loaders are only found when the level is loading (black screen), and maybe are used during the level in the code internally. They load the sprite properly, you can check this by poking a value during the level, the loader sprite lasts for just one frame, then it loads the respective sprite.
 
