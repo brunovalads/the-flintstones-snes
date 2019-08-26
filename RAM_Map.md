@@ -26,8 +26,8 @@ $7E00E7|2 bytes|[Considering a rectangle with corner 2 beign the opposite corner
 $7E00E9|2 bytes|Club hitbox corner 2 x pos.
 $7E00EB|2 bytes|Club hitbox corner 1 y pos.
 $7E00ED|2 bytes|Club hitbox corner 2 y pos.
-$7E0622|1 byte|Stage skip password flag.
-$7E0624|1 byte|Invincibility password flag.
+$7E0622|2 bytes|Stage skip password flag.
+$7E0624|2 bytes|Invincibility password flag.
 $7E0636|1 byte|Is paused flag.
 $7E0725|1 byte|Fred's graphical direction, maybe<sup>[[1]]</sup>: #40 = facing right, #104 = facing left. It's controlled by the effective direction ($7E0CB9).
 $7E0944|1 byte|Fred is loaded flag. #$01 = Fred is loaded, in levels, cutscenes, Password screen, Ocean intro. Also is #$02 when is walking in cutscenes and #$03 when jumping in cutscenes.
@@ -64,7 +64,7 @@ $7E0DC0|8 bytes|Extended sprite X speed table. The low byte is the subspeed, in 
 $7E0DC8|2 bytes|Y speed. The low byte is the subspeed, in subpixels/frame, and the high byte is the speed, in pixels/frame.
 $7E0DCA|58 bytes|Sprite Y speed table. The low byte is the subspeed, in subpixels/frame, and the high byte is the speed, in pixels/frame.
 $7E0E04|8 bytes|Extended sprite Y speed table. The low byte is the subspeed, in subpixels/frame, and the high byte is the speed, in pixels/frame.
-$7E0E94|1 byte|Is on ground flag. #01 = yes, #00 = no.
+$7E0E94|1 byte|Is on ground flag. #01 = yes, #00 = no. When set, Fred can jump.
 $7E0ED0|8 bytes|Extended sprite is on ground flag.
 $7E0FEE|2 bytes|Mirror of X speed ($7E0D84). The low byte resets to 255 when not playing.
 $7E0FF0|2 bytes|Last valid X position to respawn (if the player falls on a pit).
@@ -84,6 +84,7 @@ $7E1066|1 byte|Platform in mud pointer, it's the number of the current platform 
 $7E140F|1 byte|Language option: #00 = brittish english, #01 = american english, #02 = spanish, #03 = german, #04 = italian, #05 = french.
 $7E1485|2 bytes|Width of the current level, in blocks. $7E15B6 seems like a mirror of the low byte.
 $7E1487|2 bytes|Height of the current level, in blocks.
+$7E1491|2 bytes|Is on a platform-like sprite flag. When set, Fred can jump.
 $7E1D51|1 byte|Invincibility timer. The player has 120 frames of invincibility after being hit or falling in a pit.
 $7E1D5B|1 byte|Current level. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM_Map_Extra_Info.md#7e1d5b---current-level).
 $7E1D65|2 bytes|Lives.
