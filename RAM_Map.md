@@ -48,6 +48,7 @@ $7E0A91|8 bytes|Extended sprite accumulated Y subpixels table.
 $7E0A98|2 bytes<sup>[[1]]</sup>|Fred's animation poses. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM_Map_Extra_Info.md#7e0a98---freds-animation-poses).
 $7E0A9A|58 bytes|Sprite animation table, maybe<sup>[[1]]</sup>.
 $7E0AD4|8 bytes|Extended sprite animation table, maybe<sup>[[1]]</sup>.
+$7E0ADC|2 bytes|Player frame counter/timer for each action/status.
 $7E0ADE|58 bytes|Sprite misc table 1.
 $7E0B18|8 bytes|Extended sprite misc table 1.
 $7E0B22|58 bytes|Sprite misc table 2.
