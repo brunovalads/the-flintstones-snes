@@ -8,6 +8,14 @@
 
 Address|     Size     |Description
 :------------: | :-------------: | ------------- 
+$7E0006|2 bytes|Controller 1 input (current) flags, format BYsS^v<>AXLR0123.
+$7E0008|2 bytes|Controller 2 input (current) flags, format BYsS^v<>AXLR0123.
+$7E000A|2 bytes|Controller 1 input (newly pressed) flags, format BYsS^v<>AXLR0123.
+$7E000C|2 bytes|Controller 2 input (newly pressed) flags, format BYsS^v<>AXLR0123.
+$7E000E|2 bytes|Controller 1 input (current) flags, format BYsS^v<>AXLR0123, maybe just a mirror of $7E0006.
+$7E0010|2 bytes|Controller 1 input (newly pressed) flags, format BYsS^v<>AXLR0123, maybe just a mirror of $7E000A.
+$7E0012|2 bytes|Controller 1 input (current) flags, format BYsS^v<>AXLR0123, maybe just a mirror of $7E0006.
+$7E0014|2 bytes|Controller 2 input (current) flags, format BYsS^v<>AXLR0123, maybe just a mirror of $7E0008.
 $7E001C|2 bytes|Camera X position.
 $7E001E|2 bytes|Camera Y position.
 $7E003C|1 byte|Graphics set, maybe<sup>[[1]]</sup>. A list of valid values can be found [here](./RAM_Map_Extra_Info.md#7e003c---graphics-set-maybe).
