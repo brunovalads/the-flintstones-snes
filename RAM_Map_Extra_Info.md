@@ -89,6 +89,8 @@ Value (in hex)|Description
 11|Jungle 4 (boss)
 12|Volcanic 4 (boss) [UNUSED]
 13|Machine 4 (boss) [UNUSED]
+2B|Password Screen
+2C|Game Over Screen
 ---
 
 ### $7E2004 - Map16 table of tiles (low byte)
