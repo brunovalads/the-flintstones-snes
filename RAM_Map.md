@@ -94,7 +94,7 @@ $7E140F|1 byte|Language option: #00 = brittish english, #01 = american english, 
 $7E1485|2 bytes|Width of the current level, in blocks. $7E15B6 seems like a mirror of the low byte.
 $7E1487|2 bytes|Height of the current level, in blocks.
 $7E1491|2 bytes|Is on a platform-like sprite flag. When set, Fred can jump.
-$7E1D51|1 byte|Invincibility timer. The player has 120 frames of invincibility after being hit or falling in a pit.
+$7E1D51|2 bytes|Invincibility timer. The player has 120 frames of invincibility after being hit or falling in a pit.
 $7E1D5B|1 byte|Current level. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM_Map_Extra_Info.md#7e1d5b---current-level).
 $7E1D65|2 bytes|Lives.
 $7E1D69|2 bytes|Health (Fred faces in the life counter, #02 = normal, #01 = tongue out, #00 = tongue out and spiked hair).
