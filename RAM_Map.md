@@ -37,6 +37,7 @@ $7E00ED|2 bytes|Club hitbox corner 2 y pos.
 $7E0622|2 bytes|Stage skip password flag.
 $7E0624|2 bytes|Invincibility password flag.
 $7E0636|1 byte|Is paused flag.
+$7E06E2|58 bytes|Sprite hitbox type table. The value is used as a pointer in rom ($01B9D9) to define the hitbox corners related to the sprite position.
 $7E0725|1 byte|Fred's graphical direction, maybe<sup>[[1]]</sup>: #40 = facing right, #104 = facing left. It's controlled by the effective direction ($7E0CB9).
 $7E0944|1 byte|Fred is loaded flag. #$01 = Fred is loaded, in levels, cutscenes, Password screen, Ocean intro. Also is #$02 when is walking in cutscenes and #$03 when jumping in cutscenes.
 $7E0946|58 bytes|Sprite type table. Can be interpreted as a status sometimes.
