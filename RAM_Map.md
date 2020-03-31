@@ -135,6 +135,10 @@ $7E1DD5|2 bytes|Counter for how long you're holding a stone to throw (holding X)
 $7E1DD7|2 bytes|Idle timer. It's #300 when player is acting, then decrements whenever the player is idle. When reaches #00, activates the idle animation.
 $7E1DEB|2 bytes|Lava wave (in Volcanic 3) x pos.
 $7E1DED|2 bytes|Lava wave (in Volcanic 3) y pos.
+$7E1DEF|2 bytes|Lava wave (in Volcanic 3) pointer. It sets the x pos (at $82EC64), the timer (at $82EC5D), and the next stopping x pos (at $82EC6B). It's used right when the timer ends, then it increments in 0x06 for the next wave.
+$7E1DF1|2 bytes|Lava wave (in Volcanic 3) timer. When reaches zero, the wave starts.
+$7E1DF3|2 bytes|Lava wave (in Volcanic 3) flag for when will damage Fred. Is set when the wave is running, disabled between waves.
+$7E1DF7|2 bytes|Lava wave (in Volcanic 3) stopping x pos.
 $7E1E0E|2 bytes|Lava flood (in Volcanic 2) y pos (static).
 $7E1E10|2 bytes|Lava flood (in Volcanic 2) y pos (oscillating).
 $7E1E12|1 byte|Lava flood (in Volcanic 2) y pos in screen.
