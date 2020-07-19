@@ -21,6 +21,7 @@ DE|Password screen
 F6|Ocean logo intro + language option
 F7|Cutscenes
 FD|Hiscores, Credits
+
 ---
 ### $7E0040 (2 bytes) - Game Mode
 Value (in hex)|Description
@@ -35,6 +36,19 @@ CA42|Level name
 CB8A|Game over screen
 CED7|Intro
 D18E|Language option
+
+---
+### $7E0634 - Cutscene ID
+Value (in hex)|Description
+|:---:|---|
+00|Quarry to Bedrock
+01|Bedrock to Jungle
+02|Jungle to Volcanic
+03|Probably Volcanic to Ice Age [UNUSED]
+04|Volcanic to Machine
+05|Ending
+06|[UNUSED]
+
 ---
 ### $7E0A98 - Fred's animation poses
 *Under construction*
@@ -60,6 +74,7 @@ Value (in hex)|Description
 19|climbing ledge, tree
 1B|climbing vine
 1D|idle animation (eating, sweating, heating or sleeping)
+
 ---
 ### $7E1D5B - Current level
 Notes:
@@ -91,13 +106,12 @@ Value (in hex)|Description
 13|Machine 4 (boss) [UNUSED]
 2B|Password Screen
 2C|Game Over Screen
----
 
+---
 ### $7E2004 - Map16 table of tiles (low byte)
 *Under construction*
 
 ---
-
 ### $7E2005 - Map16 table of tiles (high byte)
 *Under construction*
 
