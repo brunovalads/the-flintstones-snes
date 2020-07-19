@@ -36,6 +36,7 @@ $7E00EB|2 bytes|Club hitbox corner 1 y pos.
 $7E00ED|2 bytes|Club hitbox corner 2 y pos.
 $7E0622|2 bytes|Stage skip password flag.
 $7E0624|2 bytes|Invincibility password flag.
+$7E0634|2 bytes|Current cutscene ID. A list of valid values can be found [here](https://github.com/brunovalads/the-flintstones-snes/blob/master/RAM_Map_Extra_Info.md#7e0634---cutscene-id).
 $7E0636|1 byte|Is paused flag.
 $7E06E2|58 bytes|Sprite hitbox type table. The value is used as a pointer in rom ($01B9D9) to define the hitbox corners related to the sprite position.
 $7E0725|1 byte|Fred's graphical direction, maybe<sup>[[1]]</sup>: #40 = facing right, #104 = facing left. It's controlled by the effective direction ($7E0CB9).
